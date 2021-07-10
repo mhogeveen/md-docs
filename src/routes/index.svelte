@@ -1,11 +1,9 @@
 <script lang="ts">
-
+  import App from '../components/App.svelte';
 </script>
 
-<main>
-  <h1>MDocs</h1>
-</main>
+<App/>
 
-<style lang="scss">
+<!-- <style lang="scss">
   
-</style>
+</style> -->
