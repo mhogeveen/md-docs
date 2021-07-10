@@ -1,16 +1,19 @@
 <script lang='ts'>
-
+  import Auth from '../components/Auth.svelte';
+  import routes from '../lib/routes';
 </script>
 
 <header class='header container'>
-  <h1 class='header__title'>MDocs</h1>
+  <h1 class='header__title'>#MDocs</h1>
   <nav class='header__nav main-nav'>
     <ul class='main-nav__list'>
+      {#each routes as route}
+        <li class='main-nav__item'>
+          <a class='main-nav__link' href={route.url}>{route.name}</a>
+        </li> 
+      {/each}
       <li class='main-nav__item'>
-        <a class='main-nav__link' href="/">Home</a>
-      </li>
-      <li class='main-nav__item'>
-        <a class='main-nav__link' href="/about">About</a>
+        <Auth/>
       </li>
     </ul>
   </nav>
